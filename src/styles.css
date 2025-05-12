@@ -1,0 +1,316 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 119, 0.6);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Section Styles */
+.left-section, .center-section, .right-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.left-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.center-section {
+  flex: 2;
+  min-width: 400px;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+h2, h3 {
+  color: #34495e;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+/* Input and Button Styles */
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.action-buttons button {
+  padding: 6px 12px;
+  width: auto;
+}
+
+/* Chart Styles */
+.chart-item {
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px;
+}
+
+/* Balance Display */
+#balance, #totalSpent {
+  font-size: 28px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-section, .center-section, .right-section {
+    width: 100%;
+  }
+}
+
+/* Auth Styles */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.error {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+/* Logout Button Styles */
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Header positioning for the button */
+header {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 119, 0.6);
+  color: white;
+}
+
+/* Google Sign-In Button Styles */
+.google-signin-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.google-signin-btn:hover {
+  background: #357ABD;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+/* Auth Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #7f8c8d;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.auth-divider::before {
+  margin-right: 1rem;
+}
+
+.auth-divider::after {
+  margin-left: 1rem;
+}
+
+/* Auth Toggle Button */
+.auth-toggle {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: #3498db;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.auth-toggle:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Enhanced Error Message */
+.error {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* Loading Indicator */
+.loading-indicator {
+  text-align: center;
+  padding: 20px;
+  color: #3498db;
+  font-size: 18px;
+}
+
+/* Add this if you want a spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
